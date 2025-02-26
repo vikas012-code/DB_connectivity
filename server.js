@@ -1,6 +1,8 @@
 import db from "./db.js";
 import express from "express";
 
+
+
 // import User from "./models/users.model.js";
 // import Product from "./models/products.model.js";
 
@@ -51,11 +53,13 @@ db();
 //   console.log(productOutput);
 // }
 
-app.get("/product", (req, res) => {
- 
+app.get("/", (req, res) => {
+  console.log("connecting.......")
+  
   res.send({ message: "Hello!!!" });
 });
 
 app.listen(process.env.PORT, () => {
+  
   console.log("server is running");
 });
